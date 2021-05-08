@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+}
+
+.card__info__container {
+  position: relative;
+  padding-top: 1.8em;
+}
+
+.card__img {
+  position: absolute;
+  top: -50%;
+  left: -7%;
+  transform: scale(0.6);
+}
+
+.card__info-company {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+}
+
+.card__info-new,
+.card__info-featured {
+  margin-left: 1em;
+  text-transform: uppercase;
+  color: white;
+  background: hsl(180, 29%, 50%);
+  padding: 0.5em 1em 0.3em 1em;
+  border-radius: 25px;
+  font-size: 0.75rem;
+}
+
+.card__info-featured {
+  background: hsl(180, 14%, 20%);
+}
+
+.card__info-position {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(180, 14%, 20%);
+  margin: 0.75em 0;
+}
+
+.card__info-details {
+  display: flex;
+  color: hsl(180, 8%, 52%);
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.card__info-details::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: hsl(180, 8%, 52%);
+  opacity: 0.5;
+  position: absolute;
+  top: 2.5em;
+}
+
+.card__info-details ul {
+  display: inline-flex;
+  font-size: 0.9rem;
+}
+
+.card__info-details ul li:nth-of-type(1) {
+  list-style: none;
+  margin-right: 0.5em;
+}
+
+.card__info-details ul li + li {
+  margin-left: 1em;
+  margin-right: 0.5em;
+}
+
+.card__reqs__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.card__reqs__container button {
+  background: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  padding: 0.75em;
+  border-radius: 5px;
+  margin: 0.75em 1em 0.75em 0;
+  cursor: pointer;
+  border: none;
+}
+
+@media only screen and (min-width: 500px) {
+  .card__info__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card__img {
+    position: static;
+    transform: scale(1);
+    margin-right: 1em;
+  }
+
+  .card__info-details {
+    margin-bottom: 0;
+  }
+
+  .card__info-details::after {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .card__reqs__container {
+    margin-top: 0;
+    margin-left: 1em;
+  }
+  .card__info__container {
+    padding-top: 0;
+  }
+}
